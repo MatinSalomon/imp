@@ -1,0 +1,11 @@
+<form action="/links/edit/{{element.id}}" method="post" id="container">
+    <img src="/logo/logo.png" alt="">
+    <input type="text" value="{{element.nombre}}" name="nombre" placeholder="nombre" required>
+    <input type="number" value="{{element.lote}}" name="lote" placeholder="lote" required>
+    <input type="number" value="{{element.cantidad}}" name="cantidad" placeholder="cantidad"required>
+    <input type="text" value="{{element.serie}}" name="serie" placeholder="serie">
+    <input type="text" value="{{element.nominacion}}" name="nominacion" placeholder="nominacion">
+    <input type="text" value="{{element.estado}}" name="estado" placeholder="estado">
+    <input type="text" value="{{element.marca}}" name="marca" placeholder="marca">
+    <button type="submit" class="btn btn-success">guardar</button>
+</form>

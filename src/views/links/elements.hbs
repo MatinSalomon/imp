@@ -1,0 +1,20 @@
+{{#each element}}
+    <div id="elements">    
+        <h1>{{nombre}}</h1>
+        <p>Lote: {{lote}}</p>
+        <p>Cantidad: {{cantidad}}</p>
+        <p>Serie: {{serie}}</p>
+        <p>Nominacio: {{nominacion}}</p>
+        <p>Estado: {{estado}}</p>
+        <p>Marca: {{marca}}</p>
+        <a href="/links/delete/{{id}}" class="btn btn-danger btn-delete"> Delete</a>
+        <a href="/links/edit/{{id}}" class="btn btn-secondary">Edit</a>
+    </div>
+    {{else}}
+        <div class="col-md-4 mx-auto notTarget">
+            <div class="card card-body text-center">
+                <p>There are not elements saved yet.</p>
+                <a href="/links/add">Create One!</a>
+            </div>
+        </div>
+{{/each}}
