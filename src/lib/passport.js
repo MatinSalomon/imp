@@ -34,11 +34,11 @@ passport.use(
 
 
 
-passport.serializeUser((user, done) => {
-  done(null, user.id);
-});
+// passport.serializeUser((user, done) => {
+//   done(null, user.id);
+// });
 
-passport.deserializeUser(async (id, done) => {
-  const [rows] = await pool.query("SELECT * FROM usuarios WHERE id = ?", [id]);
-  done(null, rows[0]);
-});
+// passport.deserializeUser(async (id, done) => {
+//   const [rows] = await pool.query("SELECT * FROM usuarios WHERE id = ?", [id]);
+//   done(null, rows[0]);
+// });
