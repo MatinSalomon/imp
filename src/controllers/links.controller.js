@@ -23,7 +23,7 @@ export const addLink = async (req, res) => {
     marca
   };
   await pool.query("INSERT INTO elementos set ?", [newLink]);
-  req.flash("success", "Link elments Successfully");
+  req.flash("success", "Element Successfully");
   res.redirect("/links");
 };
 
@@ -31,7 +31,7 @@ export const addLink = async (req, res) => {
 export const deleteLink = async (req, res) => {
   const { id } = req.params;
   await pool.query("DELETE FROM elementos WHERE ID = ?", [id]);
-  req.flash("success", "Link Removed Successfully");
+  req.flash("success", "Element Removed Successfully");
   res.redirect("/links");
 };
 
@@ -54,6 +54,6 @@ export const editLink = async (req, res) => {
     marca
   };
   await pool.query("UPDATE elementos set ? WHERE id = ?", [newLink , id]);
-  req.flash("success", "elemento Updated Successfully");
+  req.flash("success", "Element Updated Successfully");
   res.redirect("/links");
 };
